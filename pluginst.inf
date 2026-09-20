@@ -1,0 +1,7 @@
+[plugininstall]
+description=VSCpy - Volume Shadow Copies (Wiederherstellungspunkte) im TC durchsuchen, Dateien rauskopieren, Status-Spalte (Neu/Geaendert/Unveraendert) ggue. Vorgaenger-Snapshot
+type=wfx
+file0=VSCPlugin.wfx64
+file1=VSCPlugin.wfx
+defaultdir=VSCPlugin
+version=1.0
