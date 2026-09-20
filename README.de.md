@@ -1,5 +1,7 @@
 # VSCplugin (VSCpy) – Technische Dokumentation
 
+<img width="924" height="818" alt="2026-09-20_194127" src="https://github.com/user-attachments/assets/2d0c3385-fe9d-4820-8765-118ba78b2123" />
+
 ## Überblick
 
 VSCplugin ist ein Total-Commander-Dateisystem-Plugin (WFX), das die
