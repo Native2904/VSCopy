@@ -1,7 +1,9 @@
 [plugininstall]
-description=VSCpy - Volume Shadow Copies (Wiederherstellungspunkte) im TC durchsuchen, Dateien rauskopieren, Status-Spalte (Neu/Geaendert/Unveraendert) ggue. Vorgaenger-Snapshot
+description=VSCpy - Browse Volume Shadow Copies (Restore Points) in TC, extract files, status custom column (New/Modified/Unchanged) vs. predecessor snapshot
+descriptiondeu=VSCpy - Volume Shadow Copies (Wiederherstellungspunkte) im TC durchsuchen, Dateien rauskopieren, Status-Spalte (Neu/Geaendert/Unveraendert) ggue. Vorgaenger-Snapshot
+descriptionrus=VSCpy - Просмотр теневых копий томов (точек восстановления) в TC, извлечение файлов, столбец статуса (Новый/Изменён/Без изменений) относительно предыдущего снапшота
+descriptionukr=VSCpy - Перегляд тіньових копій томів (точок відновлення) у TC, видобування файлів, стовпець статусу (Новий/Змінено/Без змін) відносно попереднього знімка
 type=wfx
-file0=VSCPlugin.wfx64
-file1=VSCPlugin.wfx
+file=VSCPlugin.wfx
 defaultdir=VSCPlugin
-version=1.0
+version=1.5

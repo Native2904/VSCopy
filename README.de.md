@@ -1,6 +1,9 @@
 # VSCplugin (VSCpy) – Technische Dokumentation
 
-<img width="924" height="818" alt="2026-09-20_194127" src="https://github.com/user-attachments/assets/2d0c3385-fe9d-4820-8765-118ba78b2123" />
+> ⚠️ **Wichtig: Total Commander muss als Administrator laufen**, sonst
+> bleibt das Panel leer (Windows liefert bei fehlenden Rechten still ein
+> leeres, aber fehlerfreies Ergebnis zurück – Details siehe unten). Seit
+> v1.4 zeigt das Plugin in diesem Fall stattdessen eine Hinweisdatei an.
 
 ## Überblick
 
@@ -37,7 +40,18 @@ in folgende Quellmodule:
   sowie die Status-Spalte (`FsContentGetSupportedField`,
   `FsContentGetValueW`).
 
-# 
+### Warum die Status-Spalte im WFX selbst steckt
+
+Ursprünglich war das ein separates Content-Plugin (WDX). Es hat sich
+gezeigt, dass Total Commander die Werte eines unabhängigen WDX für
+Dateien, die über das eigene virtuelle Dateisystem eines WFX angezeigt
+werden, in einer aktiven Spalten-Ansicht **nicht automatisch** abruft –
+bestätigt sowohl durch den offiziellen TC-Forenthread *"Custom columns in
+wfx plugins"* als auch durch das Referenz-Plugin *EverySearch*, das aus
+genau diesem Grund zusätzlich zu den normalen `Content*`-Funktionen auch
+`FsContentGetSupportedField`/`FsContentGetValue` exportiert. Seitdem ist
+die Status-Spalte direkt im WFX implementiert; ein separates WDX wird
+nicht mehr benötigt.
 
 ## Wie die Diff-Logik genau funktiert
 
@@ -58,11 +72,11 @@ oder "Original"-Snapshot.**
 
 **Beispiel mit drei Snapshots A (ältester) → B → C (neuester):**
 
-| Du betrachtest | Vergleich gegen                        |
-| -------------- | -------------------------------------- |
-| C              | B                                      |
-| B              | A                                      |
-| A              | – (kein Vorgänger, Spalte bleibt leer) |
+| Du betrachtest | Vergleich gegen | 
+|---|---|
+| C | B |
+| B | A |
+| A | – (kein Vorgänger, Spalte bleibt leer) |
 
 **Bewertungskriterien** (nur für Dateien, nicht für Ordner):
 

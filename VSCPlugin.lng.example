@@ -1,0 +1,10 @@
+; VSCPlugin.lng - optional translation of the VSCStatus column labels.
+; Rename/keep this file as "VSCPlugin.lng" in the same folder as
+; VSCPlugin.wfx to activate. Default (no file, or missing key) is English.
+;
+; This example contains German labels - edit or replace with your own
+; language as needed.
+[Labels]
+New=Neu
+Modified=Geaendert
+Unchanged=Unveraendert
